@@ -1,0 +1,13 @@
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'buyukHarf',
+  standalone: true
+})
+export class BuyukHarfPipe implements PipeTransform {
+
+  transform(value: string, ...args: unknown[]): string {
+    return value.toLocaleUpperCase('tr-TR');    
+  }
+
+}

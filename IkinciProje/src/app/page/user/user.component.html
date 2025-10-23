@@ -1,0 +1,19 @@
+Tarih : {{tarih | date : 'dd,MMMM,yyyy'}}
+<table class="table table-hover">   
+    <thead>  
+        <tr>
+            <th>Id</th>
+            <th>Kullancıcı Adı</th>
+            <th>Adı</th>
+            <th>Eposta</th>
+        </tr> 
+    </thead> 
+    <tbody>
+    @for (user of users; track user.id) {    
+            <tr>
+                <th>{{user.id}}</th>
+                <th>{{user.username | buyukHarf }}</th>
+                <th>{{user.name | kisaltma :10}}</th>
+                <th>{{user.email}}</th>  
+            </tr> 
+        }        
